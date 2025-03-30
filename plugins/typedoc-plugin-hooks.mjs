@@ -2,7 +2,7 @@
 
 // @ts-check
 import { MarkdownPageEvent } from "typedoc-plugin-markdown";
-import { projectName } from "../project.config.json";
+import { projectName } from "../docusaurus.config.json" with { type: "json" };
 
 /**
  * @param {import('typedoc-plugin-markdown').MarkdownApplication} app

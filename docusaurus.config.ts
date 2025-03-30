@@ -3,7 +3,7 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 import type { VersionOptions } from "@docusaurus/plugin-content-docs";
 import docVersions from "./versions.json";
-import projectConfig from "./project.config.json";
+import projectConfig from "./docusaurus.config.json";
 
 const { projectName } = projectConfig;
 const semanticVersion = /^\d+\.\d+\.\d+$/;
