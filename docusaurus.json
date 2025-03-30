@@ -1,5 +1,5 @@
 {
-  "projectName": "project-name",
+  "projectName": "nexos",
   "organizationName": "drusco",
-  "tagline": "Project description"
+  "tagline": "Simplifies proxy creation and trap handling using events"
 }

@@ -8,7 +8,7 @@ import projectConfig from "./docusaurus.json";
 const semanticVersion = /^\d+\.\d+\.\d+$/;
 
 const getVersionsMetadata = (
-  versions: string[]
+  versions: string[],
 ): { [v: string]: VersionOptions } => {
   const result: { [v: string]: VersionOptions } = {};
   versions.forEach((version) => {
