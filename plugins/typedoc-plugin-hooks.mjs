@@ -1,7 +1,9 @@
 // ** PLugin to customize the markdown files
-import { projectName } from "@site/docusaurus.config";
+
 // @ts-check
 import { MarkdownPageEvent } from "typedoc-plugin-markdown";
+import { projectName } from "../project.config.json";
+
 /**
  * @param {import('typedoc-plugin-markdown').MarkdownApplication} app
  */
