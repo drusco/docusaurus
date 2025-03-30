@@ -3,9 +3,8 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 import type { VersionOptions } from "@docusaurus/plugin-content-docs";
 import docVersions from "./versions.json";
-import projectConfig from "./docusaurus.config.json";
+import projectConfig from "./docusaurus.json";
 
-const { projectName } = projectConfig;
 const semanticVersion = /^\d+\.\d+\.\d+$/;
 
 const getVersionsMetadata = (
@@ -37,15 +36,14 @@ if (!versions.length) {
 const lastVersion =
   versions.find((version) => semanticVersion.test(version)) || versions[0];
 
+const { projectName } = projectConfig;
+
 const config: Config = {
   title: projectName,
-  tagline: "Project description",
-  favicon: "img/favicon.ico",
-  titleDelimiter: "·",
   url: "http://localhost/",
   baseUrl: `/${projectName}/`,
-  organizationName: "drusco",
-  projectName: projectName,
+  favicon: "img/favicon.ico",
+  titleDelimiter: "·",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
 
@@ -136,6 +134,7 @@ const config: Config = {
       },
     ],
   ],
+  ...projectConfig,
 };
 
 export default config;
