@@ -13,10 +13,10 @@ export default function Home() {
   const versionPath = lastVersion === "current" ? "" : lastVersion;
 
   return (
-    <Layout title="Welcome">
+    <Layout title="Welcome!">
       <div style={{ textAlign: "center", padding: "2rem" }}>
         <h1>{projectName}</h1>
-        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Simplifies proxy creation and trap handling using events</p>
         <Link to={`/docs/${versionPath}`}>Get started</Link>
       </div>
     </Layout>

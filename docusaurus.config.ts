@@ -9,7 +9,7 @@ const { projectName } = projectConfig;
 const semanticVersion = /^\d+\.\d+\.\d+$/;
 
 const getVersionsMetadata = (
-  versions: string[],
+  versions: string[]
 ): { [v: string]: VersionOptions } => {
   const result: { [v: string]: VersionOptions } = {};
   versions.forEach((version) => {
@@ -39,10 +39,10 @@ const lastVersion =
 
 const config: Config = {
   title: projectName,
-  tagline: "Project description",
+  tagline: "Simplifies proxy creation and trap handling using events",
   favicon: "img/favicon.ico",
   titleDelimiter: "·",
-  url: "http://localhost/",
+  url: "https://drusco.github.io/",
   baseUrl: `/${projectName}/`,
   organizationName: "drusco",
   projectName: projectName,
@@ -80,7 +80,7 @@ const config: Config = {
     navbar: {
       title: projectName,
       logo: {
-        alt: "logo",
+        alt: "Nexos logo",
         src: "img/logo.svg",
       },
       items: [
@@ -116,9 +116,9 @@ const config: Config = {
       "docusaurus-plugin-typedoc",
       {
         out: "./docs/api",
-        entryPoints: [],
+        entryPoints: ["../src/index.ts"],
         readme: "none",
-        tsconfig: "./tsconfig.json",
+        tsconfig: "../tsconfig.json",
         watch: process.env.TYPEDOC_WATCH === "true",
         plugin: [
           "typedoc-plugin-no-inherit",
