@@ -1,26 +1,13 @@
 import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
-import type { VersionOptions } from "@docusaurus/plugin-content-docs";
 import docVersions from "./versions.json";
 import projectConfig from "./docusaurus.json";
 import wordsUpperCase from "./utils/wordsUpperCase";
-
-const semanticVersion = /^\d+\.\d+\.\d+$/;
-
-const getVersionsMetadata = (
-  versions: string[],
-): { [v: string]: VersionOptions } => {
-  const result: { [v: string]: VersionOptions } = {};
-  versions.forEach((version) => {
-    const hasPrefix = semanticVersion.test(version);
-    result[version] = {
-      label: `${hasPrefix ? "v" : ""}${version}`,
-      path: version,
-    };
-  });
-  return result;
-};
+import {
+  getVersionsMetadata,
+  semanticVersion,
+} from "./utils/getVersionsMetadata";
 
 const versions: string[] = docVersions;
 const versionsMetadata = getVersionsMetadata(versions);
