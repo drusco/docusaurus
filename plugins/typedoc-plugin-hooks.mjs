@@ -2,7 +2,6 @@
 
 // @ts-check
 import { MarkdownPageEvent } from "typedoc-plugin-markdown";
-import { projectName } from "../config/constants";
 
 /**
  * @param {import('typedoc-plugin-markdown').MarkdownApplication} app
@@ -12,7 +11,7 @@ export function load(app) {
     switch (page.url) {
       case "index.md":
         page.contents = page.contents.replace(
-          `# ${projectName}`,
+          /^# [0-9A-z-_]+$/m,
           "# API Reference",
         );
         break;
