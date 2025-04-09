@@ -90,12 +90,14 @@ const convertItemsToMarkdown = (items: SidebarItem[]): string => {
   let markdown = "";
   items.forEach((item) => {
     if (item.type === "category") {
-      markdown += `\n## ${item.label}`;
+      markdown += `
+      ## ${item.label}`;
       if (item.items) {
         markdown += convertItemsToMarkdown(item.items);
       }
     } else if (item.type === "doc") {
-      markdown += `\n- [${item.label}](${item.id}.md)`;
+      markdown += `
+      - [${item.label}](${item.id}.md)`;
     }
   });
   return markdown;
