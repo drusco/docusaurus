@@ -2,9 +2,9 @@ export const docusaurusPuginTypedoc = [
   "docusaurus-plugin-typedoc",
   {
     out: "./docs/api",
-    entryPoints: [],
+    entryPoints: ["../src/index.ts"],
     readme: "none",
-    tsconfig: "./tsconfig.json",
+    tsconfig: "../tsconfig.json",
     watch: process.env.TYPEDOC_WATCH === "true",
     plugin: ["typedoc-plugin-no-inherit", "./plugins/typedoc-plugin-hooks.mjs"],
     githubPages: true,
