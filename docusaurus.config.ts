@@ -1,5 +1,4 @@
 import type { Config } from "@docusaurus/types";
-import wordsUpperCase from "./utils/words-uppercase";
 import { i18nConfig } from "./config/i18n";
 import { classicPreset } from "./config/presets/preset-classic";
 import { themeConfig } from "./config/theme";
