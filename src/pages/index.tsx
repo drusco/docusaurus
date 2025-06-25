@@ -19,7 +19,7 @@ export default function Home() {
     <Layout title="Home">
       <div style={{ textAlign: "center", padding: "2rem" }}>
         <h1>{wordsUpperCase(projectName)}</h1>
-        <p>Lorem ipsum dolor sit amet.</p>
+        <p>{siteConfig.tagline}</p>
         <Link to={useBaseUrl(versionPath)}>Get started</Link>
       </div>
     </Layout>
