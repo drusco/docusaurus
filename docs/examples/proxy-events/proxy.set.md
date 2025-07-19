@@ -5,7 +5,11 @@ hide_table_of_contents: false
 
 Type: [`ProxySetEvent`](../../api/interfaces/ProxySetEvent)
 
-Fired when a property value is set.
+Triggered when a value is assigned to a property on the proxy.
+
+> This event is **cancelable**, meaning its default behavior can be prevented.
+> By calling `event.preventDefault()`, you can override or block the underlying operation.
+> This allows you to intercept and customize how the proxy responds to this operation.
 
 ### Data Properties
 
@@ -13,7 +17,7 @@ Fired when a property value is set.
 
 [`Traceable`](../../api/type-aliases/Traceable)
 
-The underlying target object, if applicable. If the proxy was created without a target, this property may be `undefined`.
+The underlying target object.
 
 #### property
 
