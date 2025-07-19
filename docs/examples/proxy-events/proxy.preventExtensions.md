@@ -7,7 +7,7 @@ Type: [`ProxyEvent`](../../api/classes/ProxyEvent)
 
 Fired when `Object.preventExtensions` is called.
 
-```javascript
+```typescript
 const proxy = nexo.create({});
 
 nexo.on("proxy.preventExtensions", () => {

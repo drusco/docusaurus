@@ -7,7 +7,7 @@ Type: [`ProxyEvent`](../../api/classes/ProxyEvent)
 
 Fired when listing all enumerable property keys.
 
-```javascript
+```typescript
 const proxy = nexo.create({ x: 1, y: 2 });
 
 nexo.on("proxy.ownKeys", () => {

@@ -7,7 +7,7 @@ Type: [`ProxyEvent`](../../api/classes/ProxyEvent)
 
 Triggered when `Object.defineProperty` is used.
 
-```javascript
+```typescript
 const proxy = nexo.create({});
 
 nexo.on("proxy.defineProperty", (event) => {

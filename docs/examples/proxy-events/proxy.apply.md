@@ -7,7 +7,7 @@ Type: [`ProxyEvent`](../../api/classes/ProxyEvent)
 
 Fired when a proxy-wrapped function is invoked.
 
-```javascript
+```typescript
 const fn = () => "called!";
 const proxy = nexo.create(fn);
 

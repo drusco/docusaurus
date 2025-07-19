@@ -7,7 +7,7 @@ Type: [`ProxyEvent`](../../api/classes/ProxyEvent)
 
 Triggered when a property is deleted from the proxy.
 
-```javascript
+```typescript
 const proxy = nexo.create({ temp: 123 });
 
 nexo.on("proxy.deleteProperty", (event) => {

@@ -7,7 +7,7 @@ Type: [`ProxyEvent`](../../api/classes/ProxyEvent)
 
 Fired when a proxy-wrapped constructor is called using `new`.
 
-```javascript
+```typescript
 function Person(name) {
   this.name = name;
 }

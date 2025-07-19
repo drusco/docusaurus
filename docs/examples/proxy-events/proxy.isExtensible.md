@@ -7,7 +7,7 @@ Type: [`ProxyEvent`](../../api/classes/ProxyEvent)
 
 Fired when checking if new properties can be added to the proxy.
 
-```javascript
+```typescript
 const proxy = nexo.create({});
 
 nexo.on("proxy.isExtensible", () => {

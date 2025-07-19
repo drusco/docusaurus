@@ -7,7 +7,7 @@ Type: [`ProxyEvent`](../../api/classes/ProxyEvent)
 
 Fired when changing the prototype with `Object.setPrototypeOf`.
 
-```javascript
+```typescript
 const proxy = nexo.create({});
 const proto = { kind: "custom" };
 

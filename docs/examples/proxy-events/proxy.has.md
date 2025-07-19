@@ -7,7 +7,7 @@ Type: [`ProxyEvent`](../../api/classes/ProxyEvent)
 
 Triggered when the `in` operator is used.
 
-```javascript
+```typescript
 const proxy = nexo.create({ loaded: true });
 
 nexo.on("proxy.has", (event) => {
