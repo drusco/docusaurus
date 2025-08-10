@@ -9,8 +9,6 @@ export const docusaurusPuginTypedoc = [
     plugin: ["typedoc-plugin-no-inherit", "./plugins/typedoc-plugin-hooks.mjs"],
     githubPages: true,
     entryFileName: "index.md",
-    // typedoc-plugin-no-inherit
-    inheritNone: true,
     // sidebar options
     sidebar: {
       autoConfiguration: true,

@@ -14,8 +14,8 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "type-check": "tsc",
-    "lint": "eslint --cache --fix --resolve-plugins-relative-to . .",
-    "lint-check": "eslint --resolve-plugins-relative-to . .",
+    "lint": "eslint --cache --fix --resolve-plugins-relative-to . . --no-ignore",
+    "lint-check": "eslint --resolve-plugins-relative-to . . --no-ignore",
     "format": "prettier --write --cache .",
     "format-check": "prettier --check ."
   },
