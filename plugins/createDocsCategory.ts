@@ -60,6 +60,16 @@ const buildSidebarItems = (
       const subItems = buildSidebarItems(itemPath, dir, fullPath, options);
       const hasSubIndexFile = fs.existsSync(path.join(itemPath, "index.md"));
 
+      // Skip this folder entirely if it only has an index.md
+      if (hasSubIndexFile && subItems.length === 0) {
+        files.push({
+          type: "doc",
+          id: `${dir}/${relativePath}/index`,
+          label: getFileLabel(path.join(itemPath, "index.md")),
+        });
+        return;
+      }
+
       folders.push({
         type: "category",
         label: wordsUpperCase(path.basename(item)),
